@@ -1,6 +1,6 @@
 //205748010310003
 #include <stdio.h>
-#include <string.h> // de dung ham stren
+#include <string.h> // de dung ham strlen
 #include <stdbool.h> // de co kieu bool
 
 typedef struct HOSO_S
@@ -54,7 +54,7 @@ void hienHoSo(HOSO hoso[], int n)
 		hoten : 30 ki tu -> %-30s
 		lop : 10 ki tu -> %-10s
 		gioi tinh : 10 ki tu ->%-10s
-		ngay sinh 2 + 2 + 4 + 3 ki tu ':' = 11 ki tu ->%-11s
+		ngay sinh 2 + 2 + 4 + 2 ki tu ':' = 11 ki tu ->%-10s
 	*/
 	printf("|--------------------------------------------------------------------------|\n");
 	printf("|%-30s\t|%-10s\t|%-10s\t|%-10s|\n", "Ho va ten", "Lop", "Gioi tinh", "Ngay sinh");
@@ -115,7 +115,7 @@ char* tachTen(char* hoten)
 {
 	/*
 		vi tri cua hien tai
-		hoten -
+		hoten -----
 			  |
 			  V
 			  vo ta nam
@@ -124,9 +124,9 @@ char* tachTen(char* hoten)
 		hoten += khoang cach tu vi tri dau den vi tri cuoi
 		dung ham strlen de tinh khoang cach
 
-		hoten ---------
-					  |
-					  V
+		hoten -------------
+				  |
+				  V
 			  vo ta nam
 	*/
 	hoten += strlen(hoten);
